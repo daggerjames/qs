@@ -558,6 +558,7 @@ test('parse()', function (t) {
         qs.parse('a', {
             decoder: function (str, defaultDecoder) {
                 st.equal(defaultDecoder, utils.decode);
+                return str;
             }
         });
         st.end();

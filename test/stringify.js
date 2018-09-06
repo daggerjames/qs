@@ -469,6 +469,7 @@ test('stringify()', function (t) {
         qs.stringify({ a: 1 }, {
             encoder: function (str, defaultEncoder) {
                 st.equal(defaultEncoder, utils.encode);
+                return str;
             }
         });
         st.end();
